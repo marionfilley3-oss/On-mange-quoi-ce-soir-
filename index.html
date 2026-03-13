@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>On mange quoi ce soir ?</title>
+<style>
+body {
+font-family: Arial;
+text-align: center;
+background-color: #f5f5f5;
+}
+
+button {
+padding: 15px 30px;
+font-size: 20px;
+margin-top: 20px;
+cursor: pointer;
+}
+
+#result {
+font-size: 30px;
+margin-top: 30px;
+font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🍽 On mange quoi ce soir ?</h1>
+
+<button onclick="choisir()">Tourner la roue</button>
+
+<div id="result"></div>
+
+<script>
+const recettes = [
+"Pâtes carbonara",
+"Omelette fromage",
+"Riz sauté",
+"Pancakes salés",
+"Gratin de pâtes",
+"Croque-monsieur",
+"Pâtes crème fromage"
+];
+
+function choisir() {
+const random = recettes[Math.floor(Math.random() * recettes.length)];
+document.getElementById("result").innerText = random;
+}
+</script>
+
+</body>
+</html>
